@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="styles.css">
     </head>      
     <body>  
         <form action="register.html" method="post" id="register">
@@ -18,40 +18,56 @@
             </div>
             <div class="field">
                 <label for="idno">ID number:</label>
-                <input type="text" id="idno" name="idno" placeholder="Enter your ID number" />
+                <input type="text" onkeypress="return onlyNumberKey(event)" maxlength="13" id="idno" name="idno" placeholder="Enter your ID number" />
                 <small></small>
             </div>
             <label for="md">Medication duration:</label>
             <div>
                 <input type="radio" name="options" value="fixed" id="fixed">
                 <label for="fixed">Fixed</label><br>
-                <label for="start_date">Start date:</label>
-                <input type="date" id="start_date" name="start_date"><br>
-                <label for="end_date">End date:</label>
-                <input type="date" id="end_date" name="end_date"><br>
-                <label for="reps">Repetition</label><br>
-                <select id="reps" name="reps">
-                    <option value="daily">Daily</option>
-                    <option value="weekly">Weekly</option>
-                    <option value="monthly">Monthly</option>
-                    <option value="annual">Annual</option>
-                </select>
+                <div id="fixed_ops">
+                    <label for="start_date">Start date:</label>
+                    <input type="date" id="start_date" name="start_date"><br>
+                    <label for="end_date">End date:</label>
+                    <input type="date" id="end_date" name="end_date"><br>
+                    <label for="reps">Repetition</label><br>
+                    <select id="reps" name="reps">
+                        <option value="none">---</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="annual">Annual</option>
+                    </select>
+                </div>
             </div>
-            <div id="cont_div">
+            <div>
                 <input type="radio" name="options" value="cont" id="cont">
                 <label for="cont">Continuous</label><br>
-                <label for="reps">Repetition</label><br>
-                <select id="reps" name="reps">
-                    <option value="daily">Daily</option>
-                    <option value="weekly">Weekly</option>
-                    <option value="monthly">Monthly</option>
-                    <option value="annual">Annual</option>
-                </select>
+                <div id = "continue">
+                    <label for="reps">Repetition</label><br>
+                    <select id="reps" name="reps">
+                        <option value="none">---</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="annual">Annual</option>
+                    </select>
+                </div>
             </div>
 
             <button type="submit">Submit</button>
         </form>
         <script src="index.js"></script>
     </body>
+    <script>
+        function onlyNumberKey(evt) {
+              
+            // Only ASCII character in that range allowed
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                return false;
+            return true;
+        }
+    </script>
 </html>
     

@@ -3,6 +3,10 @@ form#sign-in-form{
     width: 100%;
 }
 
+#fixed_ops,#continue{
+    display: none;
+}
+
 body{
     background-color: #b2b7bb;
 }
@@ -15,4 +19,5 @@ main{
     margin: 0 auto;
     background-color: #299ee6;
 }
+
 
