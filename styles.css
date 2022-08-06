@@ -2,3 +2,17 @@ form#sign-in-form{
     display: none;
     width: 100%;
 }
+
+body{
+    background-color: #b2b7bb;
+}
+
+main{
+    width:600px;
+    height: 600px;
+    border: 4px solid #299ee6;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #299ee6;
+}
+
