@@ -2,3 +2,7 @@ form#sign-in-form{
     display: none;
     width: 100%;
 }
+
+#fixed_ops,#continue{
+    display: none;
+}
