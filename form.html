@@ -1,73 +1,72 @@
-<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register New Patient</title>
+        <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles.css">
-    </head>      
-    <body>  
-        <form action="register.html" method="post" id="register">
-            <h1>Register new patient</h1>
-            <div class="field">
-                <label for="fname">Full name:</label>
-                <input type="text" id="fname" name="fname" placeholder="Enter your fullname" />
-                <small></small>
-            </div>
-            <div class="field">
-                <label for="surname">Surname:</label>
-                <input type="text" id="surname" name="surname" placeholder="Enter your surname" />
-                <small></small>
-            </div>
-            <div class="field">
-                <label for="idno">ID number:</label>
-                <input type="text" onkeypress="return onlyNumberKey(event)" maxlength="13" id="idno" name="idno" placeholder="Enter your ID number" />
-                <small></small>
-            </div>
-            <label for="md">Medication duration:</label>
-            <div>
-                <input type="radio" name="options" value="fixed" id="fixed">
-                <label for="fixed">Fixed</label><br>
-                <div id="fixed_ops">
-                    <label for="start_date">Start date:</label>
-                    <input type="date" id="start_date" name="start_date"><br>
-                    <label for="end_date">End date:</label>
-                    <input type="date" id="end_date" name="end_date"><br>
-                    <label for="reps">Repetition</label><br>
-                    <select id="reps" name="reps">
-                        <option value="none">---</option>
-                        <option value="daily">Daily</option>
-                        <option value="weekly">Weekly</option>
-                        <option value="monthly">Monthly</option>
-                        <option value="annual">Annual</option>
-                    </select>
-                </div>
-            </div>
-            <div>
-                <input type="radio" name="options" value="cont" id="cont">
-                <label for="cont">Continuous</label><br>
-                <div id = "continue">
-                    <label for="reps">Repetition</label><br>
-                    <select id="reps" name="reps">
-                        <option value="none">---</option>
-                        <option value="daily">Daily</option>
-                        <option value="weekly">Weekly</option>
-                        <option value="monthly">Monthly</option>
-                        <option value="annual">Annual</option>
-                    </select>
-                </div>
-            </div>
-
-            <button type="submit">Submit</button>
-        </form>
-        <script src="index.js"></script>
-    </body>
-    <script>
-        function onlyNumberKey(evt) {
-              
-            // Only ASCII character in that range allowed
-            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
-            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
-                return false;
-            return true;
-        }
-    </script>
-</html>
+    </head>
+    <body>
     
+    <div class="col-md-12">
+      <form action="index.html" method="post">
+        <h1> Register New Patient </h1>
+        
+        <fieldset>
+        
+        
+          <label for="name">Name:</label>
+          <input class="inputs" type="text" id="name" name="patient_name">
+        
+          <label for="email">ID Number</label>
+          <input class="inputs" type="text" id="id_no" name="patient_id">
+        
+        <!-- </fieldset>
+        <fieldset>   -->
+        
+         <label for="md">Medication duration:</label>
+         <div>
+             <input type="radio" name="options" value="fixed" id="fixed">
+             <label for="fixed">Fixed</label><br>
+             <div id="fixed_ops">
+                 <label for="start_date">Start date:</label>
+                 <input class="inputs" type="date" id="start_date" name="start_date"><br>
+                 <label for="end_date">End date:</label>
+                 <input class="inputs" type="date" id="end_date" name="end_date"><br>
+                 <label for="reps">Repetition</label><br>
+                 <select id="reps" name="reps">
+                     <option value="none">---</option>
+                     <option value="daily">Daily</option>
+                     <option value="weekly">Weekly</option>
+                     <option value="monthly">Monthly</option>
+                     <option value="annual">Annual</option>
+                 </select>
+             </div>
+         </div>
+         <div>
+            <input type="radio" name="options" value="cont" id="cont">
+            <label for="cont">Continuous</label><br>
+            <div id = "continue">
+                <label for="reps">Repetition</label><br>
+                <select id="reps" name="reps">
+                    <option value="none">---</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="annual">Annual</option>
+                </select>
+            </div>
+        </div>
+          
+          
+         </fieldset>
+       
+        <button class="submit" type="submit">Submit</button>
+        
+       </form>
+    </div>
+   
+    <script src="index.js"></script>
+    </body>
+</html>
