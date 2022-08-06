@@ -1,6 +1,6 @@
 form#sign-in-form{
     display: none;
-    width: 100%;
+    width: 70%;
 }
 
 #fixed_ops,#continue{
@@ -61,8 +61,8 @@ body{
     text-align: center;
   }
   
-  input[type="text"],
-  input[type="date"],
+  /* input[type="text"],
+  input[type="date"], */
   
   /* textarea, */
   .inputs {
@@ -72,7 +72,7 @@ body{
     height: auto;
     margin: 0;
     outline: 0;
-    padding: 15px;
+    padding: 15px 0px;
     width: 100%;
     background-color: #e8eeef;
     color: #8a97a0;
@@ -135,10 +135,16 @@ body{
     } 
   
   }
-  
+  main{
 
-    background-color: #CCCCFF;
+    width:600px;
+    height:100vh;
+    padding: 0 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #91C9ED;
     text-align: center;
+    
 }
 
 .container{
